@@ -4,7 +4,7 @@
   "description": "A little app",
   "main": "index.js",
   "scripts": {
-    "test": "tests/first.js"
+    "test": "tests/first"
   },
   "author": "Alex Jadeau & Aubin Brosset",
   "license": "ISC",
