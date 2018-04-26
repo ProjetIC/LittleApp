@@ -37,6 +37,7 @@ jobs:
       # run tests!
       #- run: yarn test
       #- run: npm test
-      - run: npm install --save-dev mocha
-      - run: ./node_modules/.bin/mocha
+      - run: npm install
+      - run: npm run check
+      - run: npm test
 
