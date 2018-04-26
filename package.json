@@ -4,7 +4,7 @@
   "description": "A little app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "./node_modules/.bin/mocha",
     "check": "eslint . --quiet"
   },
   "author": "Alex Jadeau & Aubin Brosset",
