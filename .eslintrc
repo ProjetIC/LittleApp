@@ -5,9 +5,7 @@
             2
         ],
         "quotes": [
-            2,
-            "double",
-            "avoidEscape": true
+            2
         ],
         "linebreak-style": [
             2,
