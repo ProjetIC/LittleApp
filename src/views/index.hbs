@@ -1,2 +1,23 @@
 <h1>{{ title }}</h1>
-<p>Welcome to {{ title }}</p>
+{{# if success }}
+  <h2>Success!</h2>
+{{ else }}
+  {{# if errors }}
+    <h2>Errors try again</h2>
+  {{/if}}
+  <div class="row">
+  <form action="/signin" method="post" class="col s12">
+    <div class="input-field col s12">
+      <input id="email" type="email" name="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+    <div class="input-field col s12">
+      <input id="password" type="password" name="password" class="validate">
+      <label for="password">Password</label>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit">Submit
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+  </div>
+{{/if}}
