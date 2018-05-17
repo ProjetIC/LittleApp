@@ -12,6 +12,13 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+//DB connection
+var mongoDB = 'mongodb://localhost:27017/test';
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+
+var db = mongoose.connection;
+
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}))
 app.set('views', path.join(__dirname, 'views'));
@@ -25,7 +32,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(expressSession({secret: 'user', saveUninitialized: false, resave: false}))
 
 app.use('/', indexRouter);
 
@@ -44,5 +50,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//DB connection error
+db.on('error', console.error.bind(console, 'MongoDB error:'));
 
 module.exports = app;
