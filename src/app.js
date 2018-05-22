@@ -33,7 +33,7 @@ app.use('/users', usersRouter);
 
 // session
 app.use(session({
-  secret: 'banana',
+  secret: 'supersecret',
   resave: true,
   saveUninitialized: false,
   store: new MongoStore({
