@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "mocha",
-    "check": "eslint . --quiet"
+    "check": "eslint ./src --quiet"
   },
   "author": "Alex Jadeau & Aubin Brosset",
   "license": "ISC",
