@@ -19,7 +19,7 @@
         "node": true,
         "browser": true
     },
-    "extends": "eslint:recommended",
+    
     "ecmaFeatures": {
         "experimentalObjectRestSpread": true
     }
