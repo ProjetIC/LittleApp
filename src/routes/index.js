@@ -3,7 +3,7 @@ var router = express.Router();
 var User = require('../lib/User');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.render('index', { title: 'Little App' });
 });
 
@@ -16,7 +16,7 @@ router.post('/', function(req, res, next) {
       password: req.body.password,
     }
     
-    User.create(userData, function(err, user) {
+    User.create(userData, function(err) {
       if(err) {
         return next(err);
       } else {
