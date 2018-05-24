@@ -11,7 +11,7 @@ describe('Unitaire', function () {
 
   describe('#TestUnitaire', function () {
   it('besoin de chiffres pour l\'addition', function(){
-    assert.equal(Unitaire.TestUnitaire(5,4), 9)
+    assert.equal(Unitaire.TestUnitaire(5,4), 10)
     assert.equal(Unitaire.TestUnitaire(1,2), 3)
   })
   })
